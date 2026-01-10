@@ -1,29 +1,30 @@
-# 🌙 Luna | Intelligence That Shines
+# OSCA Senior Citizen Registry System
 
-Luna is a sleek, celestial-themed AI chat interface powered by **Groq's Llama 3** models and **Supabase**. It features a "Bring Your Own Key" (BYOK) architecture, ensuring that your API usage remains private and under your control.
+A dedicated desktop application developed for the **Office for Senior Citizens Affairs (OSCA)** in San Pablo City. This system streamlines the registration process for senior citizens, manages a local database of members, and automates the generation of official OSCA Registration Forms in PDF format.
 
-## ✨ Features
+## 🚀 Features
 
-* **BYOK Architecture:** Your Groq API key is stored locally in your browser, never hitting a third-party server besides Groq itself.
-* **Persistent Memory:** Chat history is securely stored via Supabase, allowing you to revisit past "lunar sessions."
-* **Intelligent Titling:** Luna automatically summarizes your first message into a 3-word title for your history list.
-* **Dual Themes:** Toggle between **Midnight Mode** (Dark) and **Moonlight Mode** (Light).
-* **Responsive Design:** Fully optimized for desktop and mobile devices.
-* **Markdown Support:** Rich text rendering including code blocks, bolding, and lists.
+* **Citizen Registration**: Comprehensive form covering personal details, family composition, and association memberships.
+* **Automated PDF Generation**: Generates standardized OSCA forms with centered headers and organized data tables.
+* **Folder Management**: Automatically saves all generated forms into a dedicated `OSCA FORMS` folder.
+* **Database Management**: Full CRUD (Create, Read, Update, Delete) capabilities using SQLite.
+* **Dynamic Data Entry**: Add or remove rows for family members and memberships on the fly.
+* **User-Friendly Interface**: Modern sidebar navigation with a clean, scannable layout.
 
-## 🚀 Getting Started
+## 🛠️ Tech Stack
 
-### Prerequisites
-* A **Supabase** project (for authentication and database).
-* A **Groq API Key** (Get one at [console.groq.com](https://console.groq.com)).
+* **Language:** Python 3.x
+* **GUI Framework:** Tkinter
+* **Database:** SQLite3
+* **PDF Engine:** ReportLab
+* **File Handling:** OS & JSON
 
-### Installation
-1.  Clone this repository or download the files.
-2.  Ensure `index.html`, `style.css`, and `script.js` are in the same directory.
-3.  Open `index.html` in any modern web browser.
+## 📂 Project Structure
 
-### Configuration
-In `script.js`, replace the Supabase credentials with your own project details if you are self-hosting the backend:
-```javascript
-const SB_URL = "YOUR_SUPABASE_URL";
-const SB_KEY = "YOUR_SUPABASE_ANON_KEY";
+```text
+GovForma/
+├── OSCA FORMS/          # Generated PDF forms are saved here
+├── venv/                # Virtual environment
+├── main.py              # Main application logic
+├── registry.db          # SQLite database file
+└── README.md            # Documentation
